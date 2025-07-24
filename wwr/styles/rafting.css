@@ -1,17 +1,154 @@
 
     :root {
-        --primary-color: #2E5634;
+        --primary-color: #7B9B68;
         --secondary-color: #EDE0CC;
-        --accent1-color: #7B9B68;
+        --accent1-color: #2E5634;
         --accent2-color: #4DA5A7;
         --heading-font: "Roboto Slab", serif;
         --body-font: "Merriweather", serif;
     }
 
+    
     header {
+        margin: 1rem auto;
+        display: grid;
+        grid-template-columns: 110px 1fr;
+        align-items: center;
+        border-bottom: 20px solid var(--primary-color);
+        border-top: 20px solid var(--primary-color);
+        max-width: 1000px;
         background-color: var(--primary-color);
         color: var(--secondary-color);
     }
+
+    header a:hover {
+        transform: scale(1.1);
+    }
+
+    .history {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 20px 1fr;
+        gap: 20px;
+        align-items: center;
+        padding: 2rem;
+        background-color: var(--accent1-color);
+        border-radius: 5%;
+    }
+
+    .history-header {
+        grid-column: 1/4;
+        grid-row: 1/2;
+    }
+
+    .history-text {
+        font-family: var(--body-font);
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .history-image img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        border-radius: 15%;
+    }
+
+    .history-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    p {
+        color: #f9f9f9;
+    }
+
+    .adventures {
+        background-color: var(--secondary-color);
+        padding: 2rem;
+        border-radius: 2rem;
+        margin-top: 2rem;
+    }
+
+    .adventure-gallery {
+        padding-top: 15px;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 2rem;
+        overflow-x: auto;
+    }
+
+    .adventure-gallery figure {
+        flex: 1 1 150px;
+        max-width: 125px;
+        align-items: center;
+        text-align: center;
+        font-family: var(--body-font);
+        color: var(--accent1-color);
+    }
+
+    .adventure-gallery img {
+        width: 110%;
+        height: auto;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    .adventure-gallery figcaption {
+        margin-top: 0.5rem;
+        font-size: 0.95rem;
+    }
+
+    .socialmedia {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--accent2-color); 
+        padding: 0.3rem 2rem;
+        flex-wrap: wrap; 
+    }
+
+    .socialmedia p {
+        color: white;
+        font-family: var(--body-font);
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .social-icons a img {
+        width: 30px;
+        height: auto;
+        transition: transform 0.2s ease;
+    }
+
+    .social-icons a img:hover {
+        transform: scale(1.1);
+    }
+
+    a {
+        font-family: var(--heading-font);
+        text-decoration: none;
+        font-size: 1.3rem;
+    }
+
+    header nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 30px;
+        margin: 0.25rem;
+        place-items: center;
+        text-align: center;
+        
+    }
+
 
     * {
         margin: 0;
@@ -35,6 +172,11 @@
         color: var(--secondary-color);
     }
 
+    h2 {
+        text-align: center;
+        padding-bottom: 5px;
+    }
+    
     nav, p, section, article {
         margin: 16px;
         padding: 8px;
@@ -46,6 +188,7 @@
 
     .hero {
         position: relative;
+        padding-bottom: 35px;
     }
 
     .hero img {
@@ -79,7 +222,7 @@
 
     header img {
         border-radius: 50%;
-        width: 20%;
+        width: 95%;
         height: auto;
     }
 
@@ -87,9 +230,4 @@
         float: right;
         border-radius: 3%;
         width: 125px;
-    }
-
-    footer img {
-        width: 4%;
-        height: auto;
     }
