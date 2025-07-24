@@ -96,6 +96,10 @@
         box-shadow: 0 0 8px rgba(0,0,0,0.1);
     }
 
+    .adventure-gallery img:hover {
+        transform: scale(1.1);
+    }
+
     .adventure-gallery figcaption {
         margin-top: 0.5rem;
         font-size: 0.95rem;
